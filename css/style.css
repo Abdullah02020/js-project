@@ -1,0 +1,277 @@
+/* START GLOBAL RULES */
+:root {
+  --main-color: #ff9b00;
+  --secend-color: #6d7079;
+  --font-color: #363636;
+  --padding-section: 90px 0 90px 0;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.pd-y {
+  padding: 100px 0 50px 0;
+}
+html {
+  scroll-behavior: smooth;
+  /* border: 1px solid red; */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--section-color);
+}
+
+ul {
+  list-style: none;
+}
+.main-title {
+  text-align: center;
+  font-size: 35px;
+  padding-bottom: 50px;
+  color: #733925;
+  text-transform: capitalize;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+/* START THE TITEL SECTION */
+.titel {
+  text-align: center;
+}
+.titel h3 {
+  padding: 10px 0;
+  font-size: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.titel h3::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: #333;
+  bottom: -20px;
+  width: 120px;
+}
+
+.titel h3::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  background-color: white;
+  bottom: -30px;
+}
+.titel p {
+  font-weight: normal;
+  color: var(--third-color);
+  line-height: 1.4;
+  padding: 40px;
+}
+/* END THE TITEL SECTION */
+/* END GLOBAL RULES */
+/* start HEADER SECTION */
+/* start HEADER SECTION */
+header {
+  z-index: 2;
+  position: -webkit-sticky; /* For Safari */
+  position: absolute;
+  top: 0; /* Stick to the top */
+  width: 100%;
+  padding-top: 20px;
+  transition: background-color 0.5s; /* smooth transition for background color change */
+}
+/*... the rest of your CSS remains unchanged ...*/
+
+header nav {
+  font-weight: 600;
+}
+header .logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+.header-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header nav ul {
+  display: flex;
+}
+
+.header-item li a {
+  padding: 20px;
+}
+
+header nav ul li a {
+  display: block;
+  color: #363636;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 18px;
+  padding: 40px 20px;
+  z-index: 2;
+  position: relative;
+  transition: 0.5s;
+}
+header nav ul li a:hover {
+  background-image: linear-gradient(60deg, #67f0cf 10%, #a785fe 55%);
+  background-clip: text;
+  color: transparent;
+}
+.sig {
+  display: flex;
+  gap: 20px;
+}
+.sig-1 {
+  border: 1px solid #0e0e11;
+  padding: 10px 13px;
+  border-radius: 35px;
+  font-size: 15px;
+  color: #0e0e11;
+}
+.sig-2 {
+  padding: 10px 20px;
+  border: 1px solid #0e0e11;
+  border-radius: 25px;
+  background-color: #0e0e11;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .header-item {
+    flex-direction: column;
+  }
+
+  header nav ul {
+    padding-top: 10px;
+  }
+  header nav ul li a {
+    font-size: 18px;
+  }
+  .header-item li a {
+    padding: 11px 8px 0;
+  }
+}
+/* END HEADER SECTION */
+
+/* START LANDING SECTION */
+.landing {
+  position: relative;
+  background-image: url(../img/landing.png);
+  height: 100vh;
+  background-position: center;
+  background-attachment: fixed;
+}
+.landing .container {
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(369px, 1fr));
+  gap: 370px;
+}
+.landing .text {
+  width: 122%;
+  user-select: none;
+}
+.landing h1 {
+  font-size: 51px;
+  color: #0e0e11;
+  line-height: 60px;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+.landing p {
+  width: 112%;
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 20px;
+  color: #3b3c45;
+}
+.landing span {
+  background-image: linear-gradient(60deg, #67f0cf 10%, #a785fe 55%);
+  background-clip: text;
+  font-weight: bold;
+  color: transparent;
+}
+.landing .icon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.landing .icon .icons img {
+  border: 1px solid #e1e2e5;
+  border-radius: 50%;
+  margin-left: -10px;
+  width: 45px;
+  transition: 0.5s;
+}
+
+.landing h5 {
+  color: #6d7079;
+}
+.landing .imgd img {
+  position: absolute;
+  bottom: -154px;
+  width: 28%;
+  border-radius: 10% 10% 0% 0%;
+}
+.landing .but a {
+  display: flex;
+  gap: 10px;
+  background-color: black;
+  padding: 10px 7px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+/* END LANDING SECTION */
